@@ -6,14 +6,13 @@ import 'package:get_it/get_it.dart';
 import 'package:stacked/stacked.dart';
 
 import '../../../application/router.gr.dart';
-import '../../../infrastructure/iadvertisment.dart';
+
 import '../../../infrastructure/ipage_router_service.dart';
 
 class SetupViewModel extends BaseViewModel {
   GetIt getIt = GetIt.instance;
   late IPageRouterService router;
   late BuildContext _context;
-  late IAdvertisment _advertisment;
 
   late int? _minutes = 0;
   late int? _increment = 0;
@@ -40,7 +39,6 @@ class SetupViewModel extends BaseViewModel {
 
   void initialise(BuildContext context) async {
     router = getIt.get<IPageRouterService>();
-    _advertisment = getIt.get<IAdvertisment>();
     _context = context;
 
     notifyListeners();
@@ -65,8 +63,6 @@ class SetupViewModel extends BaseViewModel {
   }
 
   beginGame() async {
-    await _advertisment.interstitialAd.show();
-    await _advertisment.loadAd();
     var minutes = _minutes ?? 5;
     var increment = _increment ?? 0;
 
