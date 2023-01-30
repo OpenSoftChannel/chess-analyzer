@@ -48,6 +48,7 @@ dependencies:
   chess_vectors_flutter: ^1.0.18
   calendar_date_picker2: ^0.3.7
   numberpicker: ^2.1.1
+  responsive_grid: ^2.1.0
 
 dev_dependencies:
   flutter_test:
