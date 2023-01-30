@@ -6,6 +6,8 @@ class ThemeColors {
   static Color activeMenu = Colors.redAccent;
   static Color mainThemeBackground = const Color.fromRGBO(30, 30, 38, 1);
   static Color cardBackground = const Color.fromRGBO(40, 41, 49, 1);
+  static Color defaultBtnColor = const Color.fromARGB(255, 170, 49, 77);
+  static Color defaultBtnTextColor = Colors.white;
 }
 
 class GeneralTheme {
@@ -58,4 +60,9 @@ class GeneralTheme {
       size: 50,
     );
   }
+
+  static String defaultImage =
+      "https://yt3.ggpht.com/ytc/AL5GRJVSGg8d7zwUuFS4Xb5-qZnHQC47ViYgo4N-OhShuw=s48-c-k-c0x00ffffff-no-rj";
+  static double btnTextSize = 12;
+  static double btnIconSize = 14;
 }
