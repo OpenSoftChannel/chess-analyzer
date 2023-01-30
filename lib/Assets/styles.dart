@@ -6,6 +6,8 @@ class ThemeColors {
   static Color activeMenu = Colors.redAccent;
   static Color mainThemeBackground = const Color.fromRGBO(30, 30, 38, 1);
   static Color cardBackground = const Color.fromRGBO(40, 41, 49, 1);
+  static Color defaultBtnColor = const Color.fromARGB(255, 170, 49, 77);
+  static Color defaultBtnTextColor = Colors.white;
 }
 
 class GeneralTheme {
@@ -27,4 +29,40 @@ class GeneralTheme {
       fontStyle: FontStyle.italic,
       fontSize: 25,
       fontWeight: FontWeight.bold);
+
+  static TextStyle gridHeaderStyle = TextStyle(
+    color: ThemeColors.mainText,
+    fontSize: 15,
+  );
+
+  static InputDecoration inputDecoration = InputDecoration(
+    focusedBorder: UnderlineInputBorder(
+      borderSide: BorderSide(
+          color: ThemeColors.mainText, width: 1, style: BorderStyle.solid),
+    ),
+    labelStyle: TextStyle(color: ThemeColors.mainText),
+    fillColor: ThemeColors.mainText,
+    focusColor: ThemeColors.mainText,
+    filled: false,
+    border: UnderlineInputBorder(
+      borderSide: BorderSide(
+          color: ThemeColors.mainText, width: 1, style: BorderStyle.solid),
+    ),
+  );
+
+  static TextStyle inputDecorationText =
+      TextStyle(color: ThemeColors.mainText, fontSize: 20);
+
+  static Icon tableHeaderIcon(IconData icon) {
+    return Icon(
+      icon,
+      color: ThemeColors.mainText,
+      size: 50,
+    );
+  }
+
+  static String defaultImage =
+      "https://yt3.ggpht.com/ytc/AL5GRJVSGg8d7zwUuFS4Xb5-qZnHQC47ViYgo4N-OhShuw=s48-c-k-c0x00ffffff-no-rj";
+  static double btnTextSize = 12;
+  static double btnIconSize = 14;
 }

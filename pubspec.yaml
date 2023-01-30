@@ -31,7 +31,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  stacked: ^3.0.1
+  stacked: ^3.1.0+3
   auto_route: ^5.0.4
   get_it: ^7.2.0
   injectable: ^2.1.0
