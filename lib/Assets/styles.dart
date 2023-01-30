@@ -27,4 +27,35 @@ class GeneralTheme {
       fontStyle: FontStyle.italic,
       fontSize: 25,
       fontWeight: FontWeight.bold);
+
+  static TextStyle gridHeaderStyle = TextStyle(
+    color: ThemeColors.mainText,
+    fontSize: 15,
+  );
+
+  static InputDecoration inputDecoration = InputDecoration(
+    focusedBorder: UnderlineInputBorder(
+      borderSide: BorderSide(
+          color: ThemeColors.mainText, width: 1, style: BorderStyle.solid),
+    ),
+    labelStyle: TextStyle(color: ThemeColors.mainText),
+    fillColor: ThemeColors.mainText,
+    focusColor: ThemeColors.mainText,
+    filled: false,
+    border: UnderlineInputBorder(
+      borderSide: BorderSide(
+          color: ThemeColors.mainText, width: 1, style: BorderStyle.solid),
+    ),
+  );
+
+  static TextStyle inputDecorationText =
+      TextStyle(color: ThemeColors.mainText, fontSize: 20);
+
+  static Icon tableHeaderIcon(IconData icon) {
+    return Icon(
+      icon,
+      color: ThemeColors.mainText,
+      size: 50,
+    );
+  }
 }

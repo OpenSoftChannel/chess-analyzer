@@ -1,4 +1,7 @@
 import 'package:chess/ui/views/components/shared/card_component.dart';
+import 'package:chess/ui/views/components/shared/table_datepicker_header/table_datepicker_header_view.dart';
+import 'package:chess/ui/views/components/shared/table_header_scorepicker/table_header_scorepicker_view.dart';
+import 'package:chess/ui/views/components/shared/table_input_header/table_textfield_header_view.dart';
 import 'package:chess/ui/views/setup/setup_viewmodel.dart';
 import 'package:chess_vectors_flutter/chess_vectors_flutter.dart';
 import 'package:flutter/material.dart';
@@ -114,245 +117,42 @@ class SetupView extends StatelessWidget {
                     child: CardComponent(
                       render: Row(
                         children: [
-                          Expanded(
+                          TableTextfieldHeaderView(
                             flex: 2,
-                            child: Visibility(
-                              visible: model.showWhiteNameFilter,
-                              replacement: InkWell(
-                                onTap: model.nameFilterSelected,
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      flex: 0,
-                                      child: WhiteKing(
-                                        size: 45,
-                                      ),
-                                    ),
-                                    Expanded(
-                                      flex: 1,
-                                      child: Text(
-                                        "White",
-                                        style: TextStyle(
-                                          color: ThemeColors.mainText,
-                                          fontSize: 15,
-                                        ),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              child: TextField(
-                                onChanged: model.whiteFilterChanged,
-                                toolbarOptions: ToolbarOptions(
-                                  copy: true,
-                                  paste: true,
-                                  cut: true,
-                                  selectAll: true,
-                                ),
-                                autofocus: true,
-                                style: TextStyle(color: ThemeColors.mainText),
-                                cursorColor: ThemeColors.mainText,
-                                autocorrect: false,
-                                obscureText: false,
-                                decoration: InputDecoration(
-                                  focusedBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: ThemeColors.mainText,
-                                        width: 1,
-                                        style: BorderStyle.solid),
-                                  ),
-                                  labelStyle:
-                                      TextStyle(color: ThemeColors.mainText),
-                                  fillColor: ThemeColors.mainText,
-                                  focusColor: ThemeColors.mainText,
-                                  filled: false,
-                                  border: UnderlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: ThemeColors.mainText,
-                                        width: 1,
-                                        style: BorderStyle.solid),
-                                  ),
-                                ),
+                            icon: Expanded(
+                              flex: 0,
+                              child: WhiteKing(
+                                size: 50,
                               ),
                             ),
+                            label: "White",
+                            aligment: TextAlign.center,
+                            callback: model.whiteFilterChanged,
                           ),
-                          Expanded(
+                          TableTextfieldHeaderView(
                             flex: 2,
-                            child: Visibility(
-                              visible: model.showBlackFilterName,
-                              replacement: InkWell(
-                                onTap: model.nameBlackFilterSelected,
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                      flex: 0,
-                                      child: BlackKing(
-                                        size: 50,
-                                      ),
-                                    ),
-                                    Expanded(
-                                      flex: 1,
-                                      child: Text(
-                                        "Black",
-                                        style: TextStyle(
-                                            color: ThemeColors.mainText),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              child: TextField(
-                                onChanged: model.blackFilterChanged,
-                                toolbarOptions: ToolbarOptions(
-                                  copy: true,
-                                  paste: true,
-                                  cut: true,
-                                  selectAll: true,
-                                ),
-                                autofocus: true,
-                                style: TextStyle(color: ThemeColors.mainText),
-                                cursorColor: ThemeColors.mainText,
-                                autocorrect: false,
-                                obscureText: false,
-                                decoration: InputDecoration(
-                                  focusedBorder: UnderlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: ThemeColors.mainText,
-                                        width: 1,
-                                        style: BorderStyle.solid),
-                                  ),
-                                  labelStyle:
-                                      TextStyle(color: ThemeColors.mainText),
-                                  fillColor: ThemeColors.mainText,
-                                  focusColor: ThemeColors.mainText,
-                                  filled: false,
-                                  border: UnderlineInputBorder(
-                                    borderSide: BorderSide(
-                                        color: ThemeColors.mainText,
-                                        width: 1,
-                                        style: BorderStyle.solid),
-                                  ),
-                                ),
+                            icon: Expanded(
+                              flex: 0,
+                              child: BlackKing(
+                                size: 50,
                               ),
                             ),
+                            label: "Black",
+                            aligment: TextAlign.center,
+                            callback: model.blackFilterChanged,
                           ),
-                          Expanded(
-                            flex: 1,
-                            child: InkWell(
-                              onTap: (() => model.dateFilterSelected(context)),
-                              child: Row(
-                                children: [
-                                  Expanded(
-                                      flex: 0,
-                                      child: Icon(
-                                        Icons.date_range,
-                                        color: ThemeColors.mainText,
-                                        size: 50,
-                                      )),
-                                  Expanded(
-                                    flex: 1,
-                                    child: Text(
-                                      "Date",
-                                      style: TextStyle(
-                                          color: ThemeColors.mainText),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Expanded(
-                            flex: 1,
-                            child: Visibility(
-                              visible: model.showScorePicker,
-                              replacement: InkWell(
-                                onTap: model.scorePickerSelected,
-                                child: Row(
-                                  children: [
-                                    Expanded(
-                                        flex: 0,
-                                        child: Icon(
-                                          Icons.score,
-                                          color: ThemeColors.mainText,
-                                          size: 50,
-                                        )),
-                                    Expanded(
-                                      flex: 1,
-                                      child: Text(
-                                        "Score",
-                                        style: TextStyle(
-                                            color: ThemeColors.mainText),
-                                        textAlign: TextAlign.center,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              child: IntrinsicHeight(
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
-                                  children: [
-                                    IconButton(
-                                      color: ThemeColors.mainThemeBackground,
-                                      onPressed: (() =>
-                                          model.decrementButton(0)),
-                                      icon: Icon(
-                                        Icons.remove,
-                                        color: ThemeColors.mainText,
-                                      ),
-                                    ),
-                                    Text(
-                                      model.whiteWin.toString(),
-                                      style: TextStyle(
-                                          color: ThemeColors.mainText),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                    IconButton(
-                                      color: ThemeColors.mainThemeBackground,
-                                      onPressed: (() =>
-                                          model.incrementButton(0)),
-                                      icon: Icon(
-                                        Icons.add,
-                                        color: ThemeColors.mainText,
-                                      ),
-                                    ),
-                                    VerticalDivider(
-                                      thickness: 1,
-                                      color: ThemeColors.innerText,
-                                    ),
-                                    IconButton(
-                                      color: ThemeColors.mainThemeBackground,
-                                      onPressed: (() =>
-                                          model.decrementButton(1)),
-                                      icon: Icon(
-                                        Icons.remove,
-                                        color: ThemeColors.mainText,
-                                      ),
-                                    ),
-                                    Text(
-                                      model.blackWin.toString(),
-                                      style: TextStyle(
-                                          color: ThemeColors.mainText),
-                                      textAlign: TextAlign.center,
-                                    ),
-                                    IconButton(
-                                      color: ThemeColors.mainThemeBackground,
-                                      onPressed: (() =>
-                                          model.incrementButton(1)),
-                                      icon: Icon(
-                                        Icons.add,
-                                        color: ThemeColors.mainText,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
+                          TableDatePickerHeaderView(
+                              flex: 1,
+                              alignment: TextAlign.center,
+                              icon: Icons.date_range,
+                              label: "Date",
+                              callback: model.dateFilterSelected),
+                          TableHeaderScorePicker(
+                              flex: 1,
+                              alignment: TextAlign.center,
+                              icon: Icons.bar_chart,
+                              label: "Outcomes",
+                              callback: model.scoreFilter),
                         ],
                       ),
                     ),
@@ -481,7 +281,7 @@ class SetupView extends StatelessWidget {
         ),
       )),
       viewModelBuilder: () => SetupViewModel(),
-      onModelReady: (viewModel) => viewModel.initialise(context),
+      onViewModelReady: (viewModel) => viewModel.initialise(context),
     );
   }
 }

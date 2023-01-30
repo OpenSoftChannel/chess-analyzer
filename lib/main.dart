@@ -26,6 +26,6 @@ class MyApp extends StatelessWidget {
               child: model.app,
             ),
         viewModelBuilder: () => AppRouteViewModel(),
-        onModelReady: (model) => model.initialized(_appRouter, context));
+        onViewModelReady: (model) => model.initialized(_appRouter, context));
   }
 }
