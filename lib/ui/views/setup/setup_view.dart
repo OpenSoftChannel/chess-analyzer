@@ -1,5 +1,5 @@
 import 'package:chess/ui/views/components/game_setting_panel/game_settings_panel_view.dart';
-import 'package:chess/ui/views/components/game_table/game_table_view.dart';
+import 'package:chess/ui/views/game_board/game_board_view.dart';
 import 'package:chess/ui/views/setup/setup_viewmodel.dart';
 import 'package:flutter/material.dart';
 
@@ -23,8 +23,8 @@ class SetupView extends StatelessWidget {
               child: GameSettingsPanel(),
             ),
             Expanded(
-              flex: 10,
-              child: Gametable(),
+              flex: 6,
+              child: GameBoard(),
             ),
           ],
         ),
