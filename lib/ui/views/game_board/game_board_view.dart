@@ -15,8 +15,9 @@ class GameBoard extends StatelessWidget {
     return ViewModelBuilder.reactive(
       viewModelBuilder: (() => GameboardViewModel(null, null)),
       onViewModelReady: (viewModel) => viewModel.ready(),
-      builder: ((context, viewModel, child) => Material(
-            color: ThemeColors.mainThemeBackground,
+      builder: ((context, viewModel, child) => SizedBox(
+            width: 1192,
+            height: 1192,
             child: Stack(children: [
               GridView.count(
                 key: GlobalObjectKey("board"),
@@ -26,7 +27,7 @@ class GameBoard extends StatelessWidget {
                 clipBehavior: Clip.antiAlias,
                 addRepaintBoundaries: true,
                 childAspectRatio:
-                    MediaQuery.of(context).size.aspectRatio * 0.75,
+                    MediaQuery.of(context).size.aspectRatio * 0.42,
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 children: viewModel.squares

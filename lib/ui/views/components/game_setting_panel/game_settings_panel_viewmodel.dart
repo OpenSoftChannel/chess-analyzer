@@ -43,9 +43,6 @@ class GameSettingsPanelviewModel extends BaseViewModel {
     var minutes = _minutes ?? 5;
     var increment = _increment ?? 0;
 
-    router.router.navigate(PlaytimerView(
-      minutes: minutes,
-      increment: increment,
-    ));
+    router.changePage("/active-game");
   }
 }
