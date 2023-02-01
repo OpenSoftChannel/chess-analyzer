@@ -11,6 +11,7 @@ class GameSettingsPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
       viewModelBuilder: (() => GameSettingsPanelviewModel()),
+      onViewModelReady: (viewModel) => viewModel.initialise(context),
       builder: ((context, viewModel, child) => Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.stretch,
