@@ -23,15 +23,9 @@ class MoveButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
       viewModelBuilder: (() => MoveButtonViewModel()),
-      builder: (context, viewModel, child) => Expanded(
-        flex: flex,
-        child: InkWell(
-          onTap: (() => viewModel.getMove(direction)),
-          child: Expanded(
-            flex: 1,
-            child: GeneralTheme.tableHeaderIcon(btnIcon),
-          ),
-        ),
+      builder: (context, viewModel, child) => InkWell(
+        onTap: (() => viewModel.getMove(direction)),
+        child: GeneralTheme.tableHeaderIcon(btnIcon),
       ),
     );
   }

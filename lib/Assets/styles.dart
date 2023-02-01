@@ -8,6 +8,10 @@ class ThemeColors {
   static Color cardBackground = const Color.fromRGBO(40, 41, 49, 1);
   static Color defaultBtnColor = const Color.fromARGB(255, 170, 49, 77);
   static Color defaultBtnTextColor = Colors.white;
+
+  static Color defaultChessBlack = const Color.fromRGBO(181, 136, 99, 1);
+
+  static Color defaultChessWhite = const Color.fromRGBO(240, 217, 181, 1);
 }
 
 class GeneralTheme {

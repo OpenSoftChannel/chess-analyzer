@@ -1,3 +1,4 @@
+import 'package:chess/Assets/styles.dart';
 import 'package:chess/ui/views/components/play_table/play_table_viewmodel.dart';
 import 'package:chess/ui/views/components/shared/IconButton/elevated_icon_button.dart';
 import 'package:chess/ui/views/components/shared/move_button/move_button_view.dart';
@@ -29,32 +30,30 @@ class PlayActionTable extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(
-            flex: 0,
-            child: CardComponent(
-              render: Row(
-                children: [
-                  MoveButton(
-                      btnIcon: Icons.keyboard_double_arrow_left,
-                      direction: 3,
-                      flex: 1),
-                  MoveButton(
-                      btnIcon: Icons.arrow_back_ios, direction: 1, flex: 1),
-                  MoveButton(
-                      btnIcon: Icons.arrow_forward_ios, direction: 2, flex: 1),
-                  MoveButton(
-                      btnIcon: Icons.keyboard_double_arrow_right,
-                      direction: 3,
-                      flex: 1)
-                ],
-              ),
+          Divider(height: 1, color: ThemeColors.innerText),
+          CardComponent(
+            render: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                MoveButton(
+                    btnIcon: Icons.keyboard_double_arrow_left,
+                    direction: 3,
+                    flex: 1),
+                MoveButton(
+                    btnIcon: Icons.arrow_back_ios, direction: 1, flex: 1),
+                MoveButton(
+                    btnIcon: Icons.arrow_forward_ios, direction: 2, flex: 1),
+                MoveButton(
+                    btnIcon: Icons.keyboard_double_arrow_right,
+                    direction: 3,
+                    flex: 1)
+              ],
             ),
           ),
           Expanded(
             flex: 0,
             child: CardComponent(
               render: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Expanded(
                     child: ElevatedIconButton(

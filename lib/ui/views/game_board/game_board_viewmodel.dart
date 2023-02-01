@@ -9,8 +9,8 @@ import 'package:stacked/stacked.dart';
 import '../../../Assets/styles.dart';
 
 class GameboardViewModel extends BaseViewModel {
-  late Color _whiteColor = ThemeColors.cardBackground;
-  late Color _blackColor = ThemeColors.mainThemeBackground;
+  late Color _whiteColor = ThemeColors.defaultChessWhite;
+  late Color _blackColor = ThemeColors.defaultChessBlack;
 
   late bool _drawing = false;
   get canDraw => _drawing;

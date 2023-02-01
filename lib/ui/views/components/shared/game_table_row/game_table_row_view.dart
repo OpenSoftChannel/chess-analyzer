@@ -1,4 +1,5 @@
 import 'package:chess/ui/views/components/shared/IconButton/elevated_icon_button.dart';
+import 'package:chess/ui/views/components/shared/player_game_card/player_game_card_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../Assets/styles.dart';
@@ -39,51 +40,11 @@ class GameTableRow extends StatelessWidget {
         children: [
           Expanded(
             flex: 2,
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Image.network(
-                      whiteImageSource ?? GeneralTheme.defaultImage,
-                      width: 50,
-                      height: 50,
-                      fit: BoxFit.contain,
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              whiteName ?? "--",
-                              style: TextStyle(color: ThemeColors.mainText),
-                              textAlign: TextAlign.start,
-                            ),
-                          ),
-                          ElevatedIconButton(
-                            icon: Icons.book,
-                            label: whiteOpening ?? "",
-                          ),
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(10),
-                  child: Divider(
-                    height: 1,
-                    color: ThemeColors.innerText,
-                  ),
-                ),
-                ElevatedIconButton(
-                  icon: null,
-                  label: whiteElo != null ? "Rated: $whiteElo" : "Unrated",
-                )
-              ],
+            child: PlayerGameCard(
+              name: whiteName,
+              elo: whiteElo,
+              opening: whiteOpening,
+              imageSource: whiteImageSource,
             ),
           ),
           const SizedBox(
@@ -91,51 +52,11 @@ class GameTableRow extends StatelessWidget {
           ),
           Expanded(
             flex: 2,
-            child: Column(
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Image.network(
-                      blackImageSource ?? GeneralTheme.defaultImage,
-                      width: 50,
-                      height: 50,
-                      fit: BoxFit.contain,
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Text(
-                              blackName ?? "--",
-                              style: TextStyle(color: ThemeColors.mainText),
-                              textAlign: TextAlign.start,
-                            ),
-                          ),
-                          ElevatedIconButton(
-                            icon: Icons.book,
-                            label: blackOpening ?? "",
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                Container(
-                  padding: const EdgeInsets.all(10),
-                  child: Divider(
-                    height: 1,
-                    color: ThemeColors.innerText,
-                  ),
-                ),
-                ElevatedIconButton(
-                  icon: blackElo != null ? Icons.show_chart_rounded : null,
-                  label: blackElo != null ? "Rated: $blackElo" : "Unrated",
-                )
-              ],
+            child: PlayerGameCard(
+              name: blackName,
+              elo: blackElo,
+              opening: blackOpening,
+              imageSource: blackImageSource,
             ),
           ),
           Expanded(
