@@ -22,7 +22,7 @@ class GameboardViewModel extends BaseViewModel {
     if (blackSquares != null) _blackColor = blackSquares;
   }
 
-  ready() {
+  ready(Random rnd) {
     _squares = BoardSquare.getBoard(_blackColor, _whiteColor);
     _squares.first.occupied = WhiteKing();
     notifyListeners();

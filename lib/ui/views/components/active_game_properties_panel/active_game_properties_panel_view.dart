@@ -2,6 +2,7 @@ import 'package:chat_bubbles/bubbles/bubble_special_three.dart';
 import 'package:chat_bubbles/message_bars/message_bar.dart';
 import 'package:chess/ui/views/components/active_game_properties_panel/active_game_properties_panel_viewmodel.dart';
 import 'package:chess/ui/views/components/chat_box/chat_box_view.dart';
+import 'package:chess/ui/views/components/game_list/game_list_view.dart';
 import 'package:chess/ui/views/components/game_notes/game_notes_view.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -61,7 +62,7 @@ class ActiveGamePropertiesPanel extends StatelessWidget {
             else if (viewModel.tabVisible == 1)
               const GameNotes(flex: 1)
             else if (viewModel.tabVisible == 2)
-              const Text("Active Games")
+              GameList(flex: 1)
           ],
         ),
       ),
