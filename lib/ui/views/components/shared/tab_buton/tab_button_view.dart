@@ -31,19 +31,15 @@ class TabButton extends StatelessWidget {
         child: Visibility(
           visible: badgeCount != null,
           replacement: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Visibility(
-                  visible: icon != null,
-                  child: GeneralTheme.tableHeaderIcon(
-                    icon!,
-                    iconSize ?? 0,
-                    isActive
-                        ? ThemeColors.cardBackground
-                        : ThemeColors.mainText,
-                  )),
-              const SizedBox(
-                width: 5,
+                visible: icon != null,
+                child: GeneralTheme.tableHeaderIcon(
+                  icon!,
+                  iconSize ?? 0,
+                  isActive ? ThemeColors.cardBackground : ThemeColors.mainText,
+                ),
               ),
               Visibility(
                 visible: label != null,
@@ -55,7 +51,11 @@ class TabButton extends StatelessWidget {
                         : ThemeColors.mainText,
                     fontSize: (iconSize! - 1),
                   ),
+                  textAlign: TextAlign.center,
                 ),
+              ),
+              const SizedBox(
+                width: 10,
               ),
             ],
           ),
@@ -65,7 +65,7 @@ class TabButton extends StatelessWidget {
                   isActive ? ThemeColors.cardBackground : ThemeColors.mainText,
             ),
             ignorePointer: true,
-            position: BadgePosition.topEnd(top: 1),
+            position: BadgePosition.topEnd(),
             badgeAnimation: const BadgeAnimation.fade(
               toAnimate: true,
               loopAnimation: true,
@@ -80,9 +80,10 @@ class TabButton extends StatelessWidget {
                     ? ThemeColors.mainText
                     : ThemeColors.cardBackground,
               ),
+              textAlign: TextAlign.center,
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Visibility(
                     visible: icon != null,
@@ -93,9 +94,6 @@ class TabButton extends StatelessWidget {
                           ? ThemeColors.cardBackground
                           : ThemeColors.mainText,
                     )),
-                const SizedBox(
-                  width: 10,
-                ),
                 Visibility(
                   visible: label != null,
                   child: Text(

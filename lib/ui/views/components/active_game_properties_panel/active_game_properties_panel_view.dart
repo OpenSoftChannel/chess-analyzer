@@ -23,6 +23,12 @@ class ActiveGamePropertiesPanel extends StatelessWidget {
         color: ThemeColors.cardBackground,
         child: Column(
           children: [
+            TabButton(
+                icon: Icons.menu_open_rounded,
+                iconSize: 15,
+                label: "Return to menu",
+                isActive: viewModel.backToMenuActive,
+                callback: () => viewModel.returnToMenu()),
             Expanded(
               flex: 0,
               child: Row(
@@ -44,26 +50,16 @@ class ActiveGamePropertiesPanel extends StatelessWidget {
                         isActive: viewModel.notesActive,
                         callback: () => viewModel.showNotes()),
                   ),
-                  Expanded(
-                    child: TabButton(
-                        icon: Icons.list_alt,
-                        iconSize: 15,
-                        label: "Active Games",
-                        badgeCount: 25,
-                        isActive: viewModel.gamesActive,
-                        callback: () => viewModel.showGames()),
-                  ),
-                  Expanded(
-                    child: TabButton(
-                        icon: Icons.menu_open_rounded,
-                        iconSize: 15,
-                        label: "Return to menu",
-                        isActive: viewModel.backToMenuActive,
-                        callback: () => viewModel.returnToMenu()),
-                  ),
                 ],
               ),
             ),
+            TabButton(
+                icon: Icons.list_alt,
+                iconSize: 15,
+                label: "Active Games",
+                badgeCount: 25,
+                isActive: viewModel.gamesActive,
+                callback: () => viewModel.showGames()),
             if (viewModel.tabVisible == 0)
               const ChatBox(flex: 1)
             else if (viewModel.tabVisible == 1)
