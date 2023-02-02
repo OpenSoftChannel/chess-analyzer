@@ -1,4 +1,5 @@
 import 'package:chess/Assets/styles.dart';
+import 'package:chess/ui/views/components/concolusion_panel/conclusion_panel_view.dart';
 import 'package:chess/ui/views/components/play_table/play_table_viewmodel.dart';
 import 'package:chess/ui/views/components/shared/IconButton/elevated_icon_button.dart';
 import 'package:chess/ui/views/components/shared/move_button/move_button_view.dart';
@@ -18,6 +19,23 @@ class PlayActionTable extends StatelessWidget {
       viewModelBuilder: (() => PlayActionTableViewModel()),
       builder: (context, viewModel, child) => Column(
         children: [
+          Visibility(
+            visible: viewModel.gameEnded,
+            child: Expanded(
+              flex: 3,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  ConclusionPanel(),
+                  ConclusionPanel(),
+                ],
+              ),
+            ),
+          ),
+          Divider(
+            height: 1,
+            color: ThemeColors.mainText,
+          ),
           Expanded(
             flex: 10,
             child: ListView.builder(
@@ -59,7 +77,7 @@ class PlayActionTable extends StatelessWidget {
                     child: ElevatedIconButton(
                         icon: Icons.leave_bags_at_home_outlined,
                         label: "Resign",
-                        callback: () => {}),
+                        callback: () => viewModel.triggerEnd()),
                   ),
                   SizedBox(
                     width: 20,

@@ -53,6 +53,8 @@ dependencies:
 
   progresso: ^0.3.0
   badges: ^3.0.2
+  step_progress_indicator: ^1.0.2
+  dashed_circular_progress_bar: ^0.0.4
  
 dev_dependencies:
   flutter_test:
