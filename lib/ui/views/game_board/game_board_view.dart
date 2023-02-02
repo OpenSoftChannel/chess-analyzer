@@ -11,7 +11,9 @@ import '../../../Assets/styles.dart';
 
 // ignore: must_be_immutable
 class GameBoard extends StatelessWidget {
-  const GameBoard({super.key});
+  final double aspectRationModifier;
+
+  const GameBoard({super.key, required this.aspectRationModifier});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +28,8 @@ class GameBoard extends StatelessWidget {
               crossAxisSpacing: 0,
               clipBehavior: Clip.antiAlias,
               addRepaintBoundaries: true,
-              childAspectRatio: MediaQuery.of(context).size.aspectRatio * 0.42,
+              childAspectRatio: MediaQuery.of(context).size.aspectRatio *
+                  aspectRationModifier,
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
               children: viewModel.squares

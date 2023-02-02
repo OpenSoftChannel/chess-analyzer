@@ -23,7 +23,7 @@ class GameList extends StatelessWidget {
                   .map(
                     (e) => Column(
                       children: [
-                        GameBoard(),
+                        const GameBoard(aspectRationModifier: 0.42),
                         Row(
                           children: [
                             Expanded(child: PlayerGameCard()),

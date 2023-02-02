@@ -70,7 +70,7 @@ class ActiveGame extends StatelessWidget {
                       ),
                       const Expanded(
                         flex: 10,
-                        child: GameBoard(),
+                        child: GameBoard(aspectRationModifier: 0.485),
                       ),
                       Row(
                         children: [
