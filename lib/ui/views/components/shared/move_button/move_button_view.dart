@@ -1,7 +1,5 @@
 import 'package:chess/ui/views/components/shared/move_button/move_button_view_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:stacked/stacked.dart';
 
 import '../../../../../Assets/styles.dart';
@@ -25,7 +23,8 @@ class MoveButton extends StatelessWidget {
       viewModelBuilder: (() => MoveButtonViewModel()),
       builder: (context, viewModel, child) => InkWell(
         onTap: (() => viewModel.getMove(direction)),
-        child: GeneralTheme.tableHeaderIcon(btnIcon),
+        child:
+            GeneralTheme.tableHeaderIcon(btnIcon, null, ThemeColors.mainText),
       ),
     );
   }

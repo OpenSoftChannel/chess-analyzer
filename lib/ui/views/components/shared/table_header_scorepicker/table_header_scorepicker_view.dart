@@ -36,7 +36,8 @@ class TableHeaderScorePicker extends StatelessWidget {
               children: [
                 Expanded(
                   flex: flex,
-                  child: GeneralTheme.tableHeaderIcon(icon),
+                  child: GeneralTheme.tableHeaderIcon(
+                      icon, null, ThemeColors.mainText),
                 ),
                 Expanded(
                   flex: 1,

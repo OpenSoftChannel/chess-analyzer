@@ -57,11 +57,11 @@ class GeneralTheme {
   static TextStyle inputDecorationText =
       TextStyle(color: ThemeColors.mainText, fontSize: 20);
 
-  static Icon tableHeaderIcon(IconData icon) {
+  static Icon tableHeaderIcon(IconData icon, double? i, Color color) {
     return Icon(
       icon,
-      color: ThemeColors.mainText,
-      size: 50,
+      color: color,
+      size: i ?? 50,
     );
   }
 

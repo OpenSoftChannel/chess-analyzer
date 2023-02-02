@@ -9,6 +9,15 @@ class ActiveGamePropertiesPanelViewModel extends BaseViewModel {
   int _tabVisible = 0;
   int get tabVisible => _tabVisible;
 
+  bool get chatActive => _tabVisible == 0;
+
+  bool get notesActive => _tabVisible == 1;
+
+  bool get gamesActive => _tabVisible == 2;
+
+  bool _backtoMenuActive = false;
+  get backToMenuActive => _backtoMenuActive;
+
   ready() {
     _router = getIt.get<IPageRouterService>();
   }
@@ -30,6 +39,8 @@ class ActiveGamePropertiesPanelViewModel extends BaseViewModel {
   }
 
   returnToMenu() {
+    _backtoMenuActive = true;
+    notifyListeners();
     _router.changePage("/");
   }
 }

@@ -31,7 +31,8 @@ class TableDatePickerHeaderView extends StatelessWidget {
             children: [
               Expanded(
                 flex: 0,
-                child: GeneralTheme.tableHeaderIcon(icon),
+                child: GeneralTheme.tableHeaderIcon(
+                    icon, null, ThemeColors.mainText),
               ),
               Expanded(
                 flex: 1,
