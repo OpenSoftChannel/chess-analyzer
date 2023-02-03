@@ -42,7 +42,7 @@ class PlayActionTable extends StatelessWidget {
               itemCount: 56,
               itemBuilder: (context, index) => TableMoveRow(
                 callback: () => {},
-                move: "1.",
+                move: "1",
                 whitePlay: "0-0-0",
                 blackPlay: "qc1",
               ),
