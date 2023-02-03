@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
 import '../shared/card_component.dart';
-import '../shared/game_table_row/game_table_row_view.dart';
 
 class PlayActionTable extends StatelessWidget {
   const PlayActionTable({super.key});
@@ -17,6 +16,7 @@ class PlayActionTable extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
       viewModelBuilder: (() => PlayActionTableViewModel()),
+      onViewModelReady: (viewModel) => viewModel.ready(),
       builder: (context, viewModel, child) => Column(
         children: [
           Visibility(
@@ -86,7 +86,7 @@ class PlayActionTable extends StatelessWidget {
                     child: ElevatedIconButton(
                         icon: Icons.handshake,
                         label: "Offer a draw",
-                        callback: () => {}),
+                        callback: () => viewModel.openAnalistys()),
                   ),
                 ],
               ),
