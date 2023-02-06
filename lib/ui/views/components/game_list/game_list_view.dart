@@ -3,7 +3,7 @@ import 'package:chess/ui/views/game_board/game_board_view.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../../Assets/styles.dart';
+import '../../../../domain/Assets/styles.dart';
 import 'game_list_viewmodel.dart';
 
 // ignore: must_be_immutable

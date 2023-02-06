@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../Assets/styles.dart';
+import '../../../../domain/Assets/styles.dart';
 import '../shared/slide_button.dart';
 
 class SetupWelcomeComponent extends StatelessWidget {

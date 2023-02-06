@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../../Assets/styles.dart';
+import '../../../../domain/Assets/styles.dart';
 
 class ChatBoxViewModel extends BaseViewModel {
   List<bool> _chatSession = [true, false, false, true];

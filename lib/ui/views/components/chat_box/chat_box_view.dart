@@ -1,6 +1,6 @@
 import 'package:chat_bubbles/bubbles/bubble_special_three.dart';
 import 'package:chat_bubbles/message_bars/message_bar.dart';
-import 'package:chess/Assets/styles.dart';
+import 'package:chess/domain/Assets/styles.dart';
 import 'package:chess/ui/views/components/chat_box/chat_box_viewmodel.dart';
 import 'package:chess/ui/views/components/chat_box/chat_message.dart';
 import 'package:flutter/material.dart';

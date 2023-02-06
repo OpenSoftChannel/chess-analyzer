@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../../Assets/styles.dart';
+import '../../../../domain/Assets/styles.dart';
 
 class GameNotesViewModel extends BaseViewModel {
   List<String> _notes = [];

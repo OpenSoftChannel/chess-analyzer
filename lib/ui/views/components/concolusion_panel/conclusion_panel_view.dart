@@ -1,7 +1,7 @@
 import 'package:dashed_circular_progress_bar/dashed_circular_progress_bar.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../Assets/styles.dart';
+import '../../../../domain/Assets/styles.dart';
 
 class ConclusionPanel extends StatelessWidget {
   const ConclusionPanel({super.key});

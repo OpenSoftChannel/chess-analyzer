@@ -4,7 +4,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
-import '../../../Assets/styles.dart';
+import '../../../domain/Assets/styles.dart';
 import '../../../application/router.gr.dart';
 import '../../../application/services/timer_manager.dart';
 import '../../../infrastructure/ipage_router_service.dart';

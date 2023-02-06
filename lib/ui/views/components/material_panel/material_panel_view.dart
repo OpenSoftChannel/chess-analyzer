@@ -1,8 +1,8 @@
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as Badges;
 import 'package:chess_vectors_flutter/chess_vectors_flutter.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../Assets/styles.dart';
+import '../../../../domain/Assets/styles.dart';
 
 class MaterialPanel extends StatelessWidget {
   final bool isWhite;
@@ -14,8 +14,9 @@ class MaterialPanel extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Badge(
-          badgeStyle: BadgeStyle(badgeColor: ThemeColors.defaultBtnColor),
+        Badges.Badge(
+          badgeStyle:
+              Badges.BadgeStyle(badgeColor: ThemeColors.defaultBtnColor),
           badgeContent: Text(
             "8",
             style: TextStyle(
@@ -27,8 +28,9 @@ class MaterialPanel extends StatelessWidget {
             fillColor: isWhite ? ThemeColors.mainText : ThemeColors.innerText,
           ),
         ),
-        Badge(
-          badgeStyle: BadgeStyle(badgeColor: ThemeColors.defaultBtnColor),
+        Badges.Badge(
+          badgeStyle:
+              Badges.BadgeStyle(badgeColor: ThemeColors.defaultBtnColor),
           badgeContent: Text(
             "2",
             style: TextStyle(
@@ -40,8 +42,9 @@ class MaterialPanel extends StatelessWidget {
             fillColor: isWhite ? ThemeColors.mainText : ThemeColors.innerText,
           ),
         ),
-        Badge(
-          badgeStyle: BadgeStyle(badgeColor: ThemeColors.defaultBtnColor),
+        Badges.Badge(
+          badgeStyle:
+              Badges.BadgeStyle(badgeColor: ThemeColors.defaultBtnColor),
           badgeContent: Text(
             "2",
             style: TextStyle(
@@ -53,8 +56,9 @@ class MaterialPanel extends StatelessWidget {
             fillColor: isWhite ? ThemeColors.mainText : ThemeColors.innerText,
           ),
         ),
-        Badge(
-          badgeStyle: BadgeStyle(badgeColor: ThemeColors.defaultBtnColor),
+        Badges.Badge(
+          badgeStyle:
+              Badges.BadgeStyle(badgeColor: ThemeColors.defaultBtnColor),
           badgeContent: Text(
             "2",
             style: TextStyle(
@@ -66,8 +70,9 @@ class MaterialPanel extends StatelessWidget {
             fillColor: isWhite ? ThemeColors.mainText : ThemeColors.innerText,
           ),
         ),
-        Badge(
-          badgeStyle: BadgeStyle(badgeColor: ThemeColors.defaultBtnColor),
+        Badges.Badge(
+          badgeStyle:
+              Badges.BadgeStyle(badgeColor: ThemeColors.defaultBtnColor),
           badgeContent: Text(
             "1",
             style: TextStyle(

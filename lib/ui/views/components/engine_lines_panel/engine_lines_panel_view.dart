@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:progresso/progresso.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../../Assets/styles.dart';
+import '../../../../domain/Assets/styles.dart';
 import 'engine_lines_panel_viewmodel.dart';
 
 class EngineLinesPanel extends StatelessWidget {

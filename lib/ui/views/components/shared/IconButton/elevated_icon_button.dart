@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../Assets/styles.dart';
+import '../../../../../domain/Assets/styles.dart';
 
 // ignore: must_be_immutable
 class ElevatedIconButton extends StatelessWidget {

@@ -2,7 +2,7 @@ import 'package:chess/ui/views/components/shared/IconButton/elevated_icon_button
 import 'package:chess/ui/views/components/shared/player_game_card/player_game_card_view.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../Assets/styles.dart';
+import '../../../../../domain/Assets/styles.dart';
 import '../card_component.dart';
 
 // ignore: must_be_immutable

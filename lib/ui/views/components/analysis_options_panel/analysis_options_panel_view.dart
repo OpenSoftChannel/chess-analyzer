@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../../Assets/styles.dart';
+import '../../../../domain/Assets/styles.dart';
 import '../shared/tab_buton/tab_button_view.dart';
 import 'analysis_options_panel_viewmodel.dart';
 

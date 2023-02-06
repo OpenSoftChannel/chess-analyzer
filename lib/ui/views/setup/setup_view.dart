@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 import 'package:stacked/stacked.dart';
 
-import '../../../Assets/styles.dart';
+import '../../../domain/Assets/styles.dart';
 
 class SetupView extends StatelessWidget {
   const SetupView({super.key});

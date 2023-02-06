@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:progresso/progresso.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../Assets/styles.dart';
+import '../../../domain/Assets/styles.dart';
 import '../components/shared/player_game_card/player_game_card_view.dart';
 
 class AnalysisBoard extends StatelessWidget {

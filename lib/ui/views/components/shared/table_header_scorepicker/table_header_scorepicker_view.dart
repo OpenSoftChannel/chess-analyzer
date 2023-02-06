@@ -3,7 +3,7 @@ import 'package:chess/ui/views/components/shared/table_header_scorepicker/table_
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../../../Assets/styles.dart';
+import '../../../../../domain/Assets/styles.dart';
 
 class TableHeaderScorePicker extends StatelessWidget {
   final int flex;

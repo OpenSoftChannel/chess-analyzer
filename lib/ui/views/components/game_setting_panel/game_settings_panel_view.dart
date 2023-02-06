@@ -2,7 +2,7 @@ import 'package:chess/ui/views/components/game_setting_panel/game_settings_panel
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../../Assets/styles.dart';
+import '../../../../domain/Assets/styles.dart';
 
 class GameSettingsPanel extends StatelessWidget {
   const GameSettingsPanel({super.key});

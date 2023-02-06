@@ -1,4 +1,4 @@
-import 'package:chess/Assets/styles.dart';
+import 'package:chess/domain/Assets/styles.dart';
 import 'package:chess/ui/views/components/concolusion_panel/conclusion_panel_view.dart';
 import 'package:chess/ui/views/components/play_table/play_table_viewmodel.dart';
 import 'package:chess/ui/views/components/shared/IconButton/elevated_icon_button.dart';

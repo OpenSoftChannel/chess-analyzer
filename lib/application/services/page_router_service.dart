@@ -3,7 +3,7 @@
 import 'package:another_flushbar/flushbar.dart';
 import 'package:flutter/material.dart';
 
-import '../../Assets/styles.dart';
+import '../../domain/Assets/styles.dart';
 import '../../infrastructure/ipage_router_service.dart';
 import '../app_router_viewmodel.dart';
 import '../router.gr.dart';

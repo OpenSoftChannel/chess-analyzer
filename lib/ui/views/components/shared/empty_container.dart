@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../Assets/styles.dart';
+import '../../../../domain/Assets/styles.dart';
 
 class EmptyContainer extends StatelessWidget {
   const EmptyContainer({super.key});

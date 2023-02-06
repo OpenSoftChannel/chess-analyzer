@@ -1,5 +1,5 @@
-import 'package:badges/badges.dart';
-import 'package:chess/Assets/styles.dart';
+import 'package:badges/badges.dart' as Badges;
+import 'package:chess/domain/Assets/styles.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -59,14 +59,14 @@ class TabButton extends StatelessWidget {
               ),
             ],
           ),
-          child: Badge(
-            badgeStyle: BadgeStyle(
+          child: Badges.Badge(
+            badgeStyle: Badges.BadgeStyle(
               badgeColor:
                   isActive ? ThemeColors.cardBackground : ThemeColors.mainText,
             ),
             ignorePointer: true,
-            position: BadgePosition.topEnd(),
-            badgeAnimation: const BadgeAnimation.fade(
+            position: Badges.BadgePosition.topEnd(),
+            badgeAnimation: const Badges.BadgeAnimation.fade(
               toAnimate: true,
               loopAnimation: true,
               animationDuration: Duration(seconds: 2),

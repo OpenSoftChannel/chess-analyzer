@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../Assets/styles.dart';
+import '../../../domain/Assets/styles.dart';
 
 // ignore: must_be_immutable
 class GameBoard extends StatelessWidget {

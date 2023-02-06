@@ -2,7 +2,7 @@ import 'package:chess/ui/views/components/shared/table_datepicker_header/table_d
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../../../Assets/styles.dart';
+import '../../../../../domain/Assets/styles.dart';
 
 class TableDatePickerHeaderView extends StatelessWidget {
   final int flex;

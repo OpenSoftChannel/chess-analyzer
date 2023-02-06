@@ -2,7 +2,7 @@ import 'package:chess/ui/views/components/shared/score_counter/score_counter_vie
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../../../Assets/styles.dart';
+import '../../../../../domain/Assets/styles.dart';
 
 class ScoreCounterView extends StatelessWidget {
   final Function callback;

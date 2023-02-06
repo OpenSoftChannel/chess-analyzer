@@ -2,7 +2,7 @@ import 'package:chess/ui/views/components/shared/move_button/move_button_view_mo
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../../../Assets/styles.dart';
+import '../../../../../domain/Assets/styles.dart';
 
 // ignore: must_be_immutable
 class MoveButton extends StatelessWidget {

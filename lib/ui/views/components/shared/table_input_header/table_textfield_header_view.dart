@@ -2,7 +2,7 @@ import 'package:chess/ui/views/components/shared/table_input_header/table_textfi
 import 'package:chess_vectors_flutter/chess_vectors_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import '../../../../../Assets/styles.dart';
+import '../../../../../domain/Assets/styles.dart';
 
 class TableTextfieldHeaderView extends StatelessWidget {
   final int flex;

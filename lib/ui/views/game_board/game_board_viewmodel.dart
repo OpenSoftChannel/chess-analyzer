@@ -6,7 +6,7 @@ import 'package:draw_your_image/draw_your_image.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../Assets/styles.dart';
+import '../../../domain/Assets/styles.dart';
 
 class GameboardViewModel extends BaseViewModel {
   late Color _whiteColor = ThemeColors.defaultChessWhite;

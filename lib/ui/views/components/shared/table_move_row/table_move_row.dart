@@ -1,7 +1,8 @@
-import 'package:badges/badges.dart';
+import 'package:badges/badges.dart' as Badges;
+
 import 'package:chess_vectors_flutter/chess_vectors_flutter.dart';
 import 'package:flutter/material.dart';
-import '../../../../../Assets/styles.dart';
+import '../../../../../domain/Assets/styles.dart';
 import '../card_component.dart';
 
 // ignore: must_be_immutable
@@ -47,15 +48,15 @@ class TableMoveRow extends StatelessWidget {
             child: InkWell(
               onTap: () {},
               child: Center(
-                child: Badge(
+                child: Badges.Badge(
                   badgeContent: Icon(
                     Icons.question_mark_outlined,
                     color: ThemeColors.mainText,
                     size: 12,
                   ),
-                  position: BadgePosition.topEnd(end: -30),
-                  badgeStyle:
-                      BadgeStyle(badgeColor: ThemeColors.inaccuracieColor),
+                  position: Badges.BadgePosition.topEnd(end: -30),
+                  badgeStyle: Badges.BadgeStyle(
+                      badgeColor: ThemeColors.inaccuracieColor),
                   child: Container(
                     padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(
@@ -97,15 +98,15 @@ class TableMoveRow extends StatelessWidget {
             child: InkWell(
               onTap: () {},
               child: Center(
-                child: Badge(
+                child: Badges.Badge(
                   badgeContent: Icon(
                     Icons.question_mark_outlined,
                     color: ThemeColors.mainText,
                     size: 12,
                   ),
-                  position: BadgePosition.topEnd(end: -30),
-                  badgeStyle:
-                      BadgeStyle(badgeColor: ThemeColors.inaccuracieColor),
+                  position: Badges.BadgePosition.topEnd(end: -30),
+                  badgeStyle: Badges.BadgeStyle(
+                      badgeColor: ThemeColors.inaccuracieColor),
                   child: Container(
                     padding: EdgeInsets.all(5),
                     decoration: BoxDecoration(

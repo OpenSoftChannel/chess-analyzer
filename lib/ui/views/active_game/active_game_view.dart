@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:progresso/progresso.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../Assets/styles.dart';
+import '../../../domain/Assets/styles.dart';
 
 import 'active_game_viewmodel.dart';
 

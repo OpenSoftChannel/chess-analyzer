@@ -3,7 +3,7 @@ import 'package:chess/ui/views/play_timer/play_timer_viewmodel.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import '../../../Assets/styles.dart';
+import '../../../domain/Assets/styles.dart';
 
 class PlaytimerView extends StatelessWidget {
   final int increment;

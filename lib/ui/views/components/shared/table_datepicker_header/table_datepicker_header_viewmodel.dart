@@ -2,7 +2,7 @@ import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
-import '../../../../../Assets/styles.dart';
+import '../../../../../domain/Assets/styles.dart';
 
 class TableDatePickerHeaderViewModel extends BaseViewModel {
   dateFilterSelected(BuildContext context, Function callback) async {
