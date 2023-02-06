@@ -55,7 +55,8 @@ dependencies:
   badges: ^3.0.2
   step_progress_indicator: ^1.0.2
   dashed_circular_progress_bar: ^0.0.4
-  charts_painter: ^3.0.0
+  charts_painter: 
+    path: "/home/kristifor/Projects/flutter-charts/"
  
 dev_dependencies:
   flutter_test:

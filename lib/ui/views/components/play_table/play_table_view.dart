@@ -19,23 +19,6 @@ class PlayActionTable extends StatelessWidget {
       onViewModelReady: (viewModel) => viewModel.ready(),
       builder: (context, viewModel, child) => Column(
         children: [
-          Visibility(
-            visible: viewModel.gameEnded,
-            child: Expanded(
-              flex: 3,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  ConclusionPanel(),
-                  ConclusionPanel(),
-                ],
-              ),
-            ),
-          ),
-          Divider(
-            height: 1,
-            color: ThemeColors.mainText,
-          ),
           Expanded(
             flex: 10,
             child: ListView.builder(
@@ -68,30 +51,6 @@ class PlayActionTable extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-            flex: 0,
-            child: CardComponent(
-              render: Row(
-                children: [
-                  Expanded(
-                    child: ElevatedIconButton(
-                        icon: Icons.leave_bags_at_home_outlined,
-                        label: "Resign",
-                        callback: () => viewModel.triggerEnd()),
-                  ),
-                  SizedBox(
-                    width: 20,
-                  ),
-                  Expanded(
-                    child: ElevatedIconButton(
-                        icon: Icons.handshake,
-                        label: "Offer a draw",
-                        callback: () => viewModel.openAnalistys()),
-                  ),
-                ],
-              ),
-            ),
-          )
         ],
       ),
     );

@@ -1,3 +1,52 @@
 import 'package:stacked/stacked.dart';
 
-class AnalysisOptionPanelViewModel extends BaseViewModel {}
+class AnalysisOptionPanelViewModel extends BaseViewModel {
+  List<int> _chartTestData = [
+    1,
+    3,
+    4,
+    2,
+    7,
+    6,
+    2,
+    5,
+    4,
+    1,
+    3,
+    4,
+    2,
+    7,
+    6,
+    2,
+    5,
+    4,
+    1,
+    3,
+    4,
+    2,
+    7,
+    6,
+    2,
+    5,
+    4,
+    1,
+    3,
+    4,
+    2,
+    7,
+    6,
+    2,
+    5,
+    4,
+    1,
+    3,
+    4,
+    2,
+    7,
+    6,
+    2,
+    5,
+    4
+  ];
+  List<int> get chartTestData => _chartTestData;
+}
