@@ -1,0 +1,151 @@
+<mxfile host="65bd71144e">
+    <diagram id="cmecJaTW8b3Xt6wgYi1p" name="Page-1">
+        <mxGraphModel dx="3173" dy="1956" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" style="edgeStyle=none;html=1;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=none;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="2" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;h1&gt;Game Importer&lt;/h1&gt;&lt;p&gt;This document has the sole purpose of solving the chess game import feature in our solution.&amp;nbsp;&lt;br&gt;&lt;br&gt;We are going to support the two most common standards of chess game files currently in use.&lt;br&gt;&lt;br&gt;Standard #1 PGN file format.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Standard #2 FEN&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Reference:&amp;nbsp;https://www.chess.com/terms/fen-chess&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=#666666;fillColor=#f5f5f5;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="120" width="190" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;br&gt;PGN Example&lt;br&gt;&lt;br&gt;[Event &quot;Rated Classical game&quot;]&lt;br&gt;[Site &quot;https://lichess.org/KUcfO0pQ&quot;]&lt;br&gt;[Date &quot;2023.02.12&quot;]&lt;br&gt;[White &quot;DAHI301&quot;]&lt;br&gt;[Black &quot;satranc_ustasi7&quot;]&lt;br&gt;[Result &quot;0-1&quot;]&lt;br&gt;[UTCDate &quot;2023.02.12&quot;]&lt;br&gt;[UTCTime &quot;17:24:36&quot;]&lt;br&gt;[WhiteElo &quot;1810&quot;]&lt;br&gt;[BlackElo &quot;1806&quot;]&lt;br&gt;[WhiteRatingDiff &quot;-6&quot;]&lt;br&gt;[BlackRatingDiff &quot;+56&quot;]&lt;br&gt;[Variant &quot;Standard&quot;]&lt;br&gt;[TimeControl &quot;1800+0&quot;]&lt;br&gt;[ECO &quot;C50&quot;]&lt;br&gt;[Opening &quot;Italian Game: Giuoco Pianissimo, Normal&quot;]&lt;br&gt;[Termination &quot;Normal&quot;]&lt;br&gt;[Annotator &quot;lichess.org&quot;]&lt;br&gt;&lt;br&gt;1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d3 Bc5 { C50 Italian Game: Giuoco &lt;br&gt;Pianissimo, Normal } 5. h3 h6 6. a3 a5 7. Nc3 d6 8. Ne2 Ne7 9. Ng3 Ng6 &lt;br&gt;10. O-O O-O 11. Bd2 c6 12. Ba2 Re8 13. c3 Bb6 14. b4 Be6 15. Bxe6 fxe6 &lt;br&gt;16. Rb1 d5 17. bxa5 Rxa5 18. Qb3 Ra6 19. a4 Re7 20. Be3 d4 21. cxd4 exd4&lt;br&gt; 22. Bd2 Kh8 23. Ra1 Qa8 24. Ra2 Nf8 25. Rfa1 N8d7 26. a5 Ba7 27. Bb4 c5&lt;br&gt; 28. Bd2 e5 29. Nf5 Ree6 30. N3h4 Kh7 31. Qd1 Bb8 32. Qc1 Bc7 33. Qe1 b5&lt;br&gt; 34. Qb1 b4 35. Qb3 Ng8 36. Nf3 g6 37. Ng3 Ngf6 38. Nh4 Bd8 39. Nf3 Ne8 &lt;br&gt;40. Be1 Ng7 41. Nd2 Bxa5 42. Nc4 Bd8 43. Rxa6 Rxa6 44. Rxa6 Qxa6 45. Kh2&lt;br&gt; h5 46. Bd2 h4 47. Nh1 g5 48. f3 Kg6 49. Nf2 Nh5 50. Ng4 Bc7 51. Qb2 Nf4&lt;br&gt; 52. Bxf4 gxf4 53. Qb1 Kf7 54. Qe1 Bd8 { Black offers draw } 55. Ngxe5+ &lt;br&gt;Nxe5 56. Nxe5+ Ke6 57. Nc4 b3 58. Qd2 Bg5 59. Qb2 Qa2 60. Qa3 Be7 61. &lt;br&gt;Qb2 Qxb2 62. Nxb2 Bd8 63. Kg1 Ba5 64. Kf2 Bc3 65. Na4 b2 66. Nxb2 Bxb2 &lt;br&gt;67. Ke2 Kd6 68. Kd2 Bc3+ 69. Kc2 Kc6 70. Kb3 Kb5 71. Kc2 Kb4 72. e5 Kb5 &lt;br&gt;73. e6 Kc6 74. e7 Kd7 75. e8=Q+ Kxe8 76. Kb3 Kd7 77. Kc4 Kc6 78. Kb3 Kb5&lt;br&gt; 79. Kc2 Kb4 80. Kd1 Kb3 81. Kc1 Be1 82. Kd1 Bf2 83. Ke2 Be3 84. Kd1 Kc3&lt;br&gt; 85. Ke2 Kc2 86. Ke1 Kxd3 87. g3 fxg3 88. f4 g2 { White resigns. } 0-1" style="whiteSpace=wrap;html=1;aspect=fixed;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="-600" y="-7.5" width="575" height="575" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;p style=&quot;text-align: left;&quot;&gt;FEN:&amp;nbsp;r1bqkbnr/pppp1ppp/2n5/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3&lt;br&gt;&lt;/p&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="320" y="-20" width="390" height="390" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;" parent="1" source="7" target="9" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="PGN" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;" parent="1" vertex="1">
+                    <mxGeometry x="-130" y="990" width="80" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="8" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="FEN" style="shape=card;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="990" width="80" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="File Processor" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="-150" y="850" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="File Processor" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="35" y="850" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Game Processor" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="570" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="edgeStyle=none;html=1;" parent="1" source="14" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
+                    <mxGeometry x="755" y="400" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=none;html=1;" parent="1" source="15" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" style="edgeStyle=none;html=1;" parent="1" source="15" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="915" y="570" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="27" value="" style="edgeStyle=none;html=1;" parent="1" source="15" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="IF" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="745" y="530" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="curved=1;endArrow=classic;html=1;exitX=0;exitY=0;exitDx=120;exitDy=50;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="13" target="15" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="655" y="620" as="sourcePoint"/>
+                        <mxPoint x="705" y="570" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="705" y="620"/>
+                            <mxPoint x="655" y="570"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=none;html=1;entryX=0.092;entryY=0.48;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="21" target="24" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Then" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="905" y="540" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="False" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="885" y="400" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Save Entry" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1075" y="530" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="edgeStyle=none;html=1;" parent="1" source="26" target="28" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Else if" style="whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="725" y="680" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Flag an exception" style="rhombus;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="945" y="670" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="" style="shape=flexArrow;endArrow=classic;html=1;exitX=0;exitY=0;exitDx=70;exitDy=80;exitPerimeter=0;" parent="1" source="13" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="560" y="567.5" as="sourcePoint"/>
+                        <mxPoint x="580" y="720" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="580" y="680"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="59" value="Accepted Data Model" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="720" width="260" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="{&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Event&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Date*&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Site&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;White&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Black&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;ECO&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;List&amp;lt;Move&amp;gt; gameMoves&lt;br&gt;}" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="59" vertex="1">
+                    <mxGeometry x="10" y="40" width="180" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="Move Model" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="1" vertex="1">
+                    <mxGeometry x="790" y="830" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="{&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;/span&gt;MoveNumber*&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;/span&gt;White*&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;/span&gt;Black*&lt;br&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#9;&lt;/span&gt;&lt;br&gt;}" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="61" vertex="1">
+                    <mxGeometry x="15" y="40" width="150" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" style="edgeStyle=none;html=1;" parent="1" source="60" target="62" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="" style="shape=or;whiteSpace=wrap;html=1;rotation=-90;" parent="1" vertex="1">
+                    <mxGeometry x="-45" y="585" width="90" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="Move Processor" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="-55" y="680" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" style="edgeStyle=none;html=1;" parent="1" source="66" target="64" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="IMoveProcesor" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-51.25" y="580" width="102.5" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="" style="shape=flexArrow;endArrow=classic;html=1;entryX=0.005;entryY=0.858;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.375;exitY=0;exitDx=0;exitDy=0;" parent="1" source="11" target="64" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="140" y="870" as="sourcePoint"/>
+                        <mxPoint x="190" y="820" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="71" value="" style="shape=flexArrow;endArrow=classic;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="64" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="-60" y="850" as="sourcePoint"/>
+                        <mxPoint x="-10" y="800" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="73" value="" style="shape=flexArrow;endArrow=classic;startArrow=classic;html=1;entryX=-0.005;entryY=0.485;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.7;exitY=0.9;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="64" target="13" edge="1">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="100" y="690" as="sourcePoint"/>
+                        <mxPoint x="200" y="590" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
