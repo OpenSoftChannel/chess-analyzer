@@ -43,6 +43,7 @@ class AnalysisBoard extends StatelessWidget {
                                 child: GameAccuracySlider(
                                   black: 4,
                                   white: 1,
+                                  rounding: 0,
                                 ),
                               ),
                               const SizedBox(

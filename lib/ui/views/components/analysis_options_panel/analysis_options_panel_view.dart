@@ -1,11 +1,9 @@
-import 'dart:ffi';
-
+import 'package:chess/ui/views/components/line_chart/line_chart_view.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
-import 'package:charts_painter/chart.dart';
 
-import '../../../../domain/Assets/styles.dart';
 import '../shared/tab_buton/tab_button_view.dart';
+import '../timerframe_bar_chart/timeframe_bar_chart_view.dart';
 import 'analysis_options_panel_viewmodel.dart';
 
 class AnalysisOptionsPanel extends StatelessWidget {
@@ -25,8 +23,8 @@ class AnalysisOptionsPanel extends StatelessWidget {
                       icon: Icons.line_axis,
                       iconSize: 15,
                       label: "Analysis Chart",
-                      isActive: true,
-                      callback: () => {},
+                      isActive: viewModel.isAdvantageOpen,
+                      callback: () => viewModel.advantageOpen(),
                     ),
                   ),
                   Expanded(
@@ -34,8 +32,8 @@ class AnalysisOptionsPanel extends StatelessWidget {
                       icon: Icons.timer,
                       iconSize: 15,
                       label: "Move Times",
-                      isActive: false,
-                      callback: () => {},
+                      isActive: viewModel.isTimeframeOpen,
+                      callback: () => viewModel.openTimeframe(),
                     ),
                   ),
                   Expanded(
@@ -43,8 +41,8 @@ class AnalysisOptionsPanel extends StatelessWidget {
                       icon: Icons.share,
                       iconSize: 15,
                       label: "Share and export",
-                      isActive: false,
-                      callback: () => {},
+                      isActive: viewModel.isExportOpen,
+                      callback: () => viewModel.openExport(),
                     ),
                   ),
                   Expanded(
@@ -52,50 +50,26 @@ class AnalysisOptionsPanel extends StatelessWidget {
                       icon: Icons.difference,
                       iconSize: 15,
                       label: "Variations",
-                      isActive: false,
-                      callback: () => {},
+                      isActive: viewModel.isVaritationsOpen,
+                      callback: () => viewModel.openVariations(),
                     ),
                   )
                 ],
               ),
-              Expanded(
-                flex: 10,
-                child: Chart(
-                    state: ChartState<void>(
-                  data: ChartData.fromList(
-                    viewModel.chartTestData
-                        .map((e) => ChartItem<GestureDetector>(e.toDouble()))
-                        .toList(),
-                    axisMax: 8,
-                  ),
-                  itemOptions: BarItemOptions(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    barItemBuilder: (_) => BarItem(
-                      color: Colors.red,
-                      radius: BorderRadius.vertical(top: Radius.circular(12.0)),
-                    ),
-                  ),
-                  behaviour: ChartBehaviour(
-                    isScrollable: false,
-                    onItemHoverEnter: (value) {
-                      print(value);
-                    },
-                    onItemHoverExit: (value) {
-                      print(value);
-                    },
-                    onItemClicked: (value) {
-                      print(value);
-                    },
-                  ),
-                  backgroundDecorations: [
-                    SparkLineDecoration(
-                      smoothPoints: true,
-                      fill: true,
-                      lineColor: Theme.of(context).accentColor,
-                    ),
-                  ],
-                )),
-              )
+              if (viewModel.isAdvantageOpen)
+                const Expanded(
+                  flex: 10,
+                  child: LineChart(),
+                )
+              else if (viewModel.isExportOpen)
+                Text("Export")
+              else if (viewModel.isTimeframeOpen)
+                const Expanded(
+                  flex: 10,
+                  child: TimeframeBarChart(),
+                )
+              else if (viewModel.isVaritationsOpen)
+                Text("Variations")
             ],
           )),
     );
