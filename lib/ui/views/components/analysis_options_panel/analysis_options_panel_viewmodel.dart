@@ -1,6 +1,11 @@
+import 'package:chess/infrastructure/ipage_router_service.dart';
+import 'package:get_it/get_it.dart';
 import 'package:stacked/stacked.dart';
 
 class AnalysisOptionPanelViewModel extends BaseViewModel {
+  GetIt getIt = GetIt.I;
+  late IPageRouterService _router;
+
   bool _isAdvantageOpen = true;
   bool get isAdvantageOpen => _isAdvantageOpen;
   bool _isTimeframeOpen = false;
@@ -11,6 +16,10 @@ class AnalysisOptionPanelViewModel extends BaseViewModel {
 
   bool _isVariationsOpen = false;
   bool get isVaritationsOpen => _isVariationsOpen;
+
+  ready() {
+    _router = getIt.get<IPageRouterService>();
+  }
 
   advantageOpen() {
     disableAll();
@@ -41,5 +50,9 @@ class AnalysisOptionPanelViewModel extends BaseViewModel {
     _isExportOpen = false;
     _isTimeframeOpen = false;
     _isVariationsOpen = false;
+  }
+
+  returnToParent() {
+    _router.changePage("/active-game");
   }
 }

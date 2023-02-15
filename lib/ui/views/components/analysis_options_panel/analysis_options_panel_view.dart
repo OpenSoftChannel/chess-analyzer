@@ -1,6 +1,7 @@
 import 'package:chess/domain/Assets/styles.dart';
 import 'package:chess/ui/views/components/export_panel/export_panel_view.dart';
 import 'package:chess/ui/views/components/line_chart/line_chart_view.dart';
+import 'package:chess/ui/views/components/shared/IconButton/elevated_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
@@ -15,6 +16,7 @@ class AnalysisOptionsPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
       viewModelBuilder: (() => AnalysisOptionPanelViewModel()),
+      onViewModelReady: (viewModel) => viewModel.ready(),
       builder: ((context, viewModel, child) => Column(
             children: [
               Row(
@@ -54,6 +56,16 @@ class AnalysisOptionsPanel extends StatelessWidget {
                       label: "Variations",
                       isActive: viewModel.isVaritationsOpen,
                       callback: () => viewModel.openVariations(),
+                    ),
+                  ),
+                  Expanded(
+                    child: TabButton(
+                      color: ThemeColors.defaultBtnColor,
+                      iconSize: 15,
+                      isActive: true,
+                      icon: Icons.arrow_back_outlined,
+                      label: "Return",
+                      callback: () => viewModel.returnToParent(),
                     ),
                   )
                 ],
