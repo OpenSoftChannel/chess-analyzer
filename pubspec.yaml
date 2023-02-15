@@ -57,6 +57,7 @@ dependencies:
   dashed_circular_progress_bar: ^0.0.4
   charts_painter: 
     path: "/home/kristifor/Projects/flutter-charts/"
+  font_awesome_flutter: ^10.4.0
  
 dev_dependencies:
   flutter_test:

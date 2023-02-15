@@ -1,9 +1,8 @@
+import 'package:chess/ui/views/components/export_panel/export_panel_game_details_view.dart';
+import 'package:chess/ui/views/components/export_panel/pgn_board_moves_view.dart';
+import 'package:chess/ui/views/components/export_panel/share_panel.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:stacked/stacked.dart';
-
-import '../../../../domain/Assets/styles.dart';
 import 'export_panel_viewmodel.dart';
 
 class ExportPanel extends StatelessWidget {
@@ -15,30 +14,11 @@ class ExportPanel extends StatelessWidget {
       viewModelBuilder: (() => ExportPanelViewModel()),
       builder: (context, viewModel, child) =>
           Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-        Column(
-          children: [
-            Row(
-              children: [
-                Icon(
-                  Icons.location_city,
-                  color: ThemeColors.mainText,
-                ),
-                Text(
-                  "Location:",
-                  style: TextStyle(
-                    color: ThemeColors.mainText,
-                  ),
-                ),
-                Text(
-                  "Brisbane, Austratia",
-                  style: TextStyle(
-                    color: ThemeColors.mainText,
-                  ),
-                ),
-              ],
-            )
-          ],
-        )
+        Expanded(
+          child: ExportPanelGameDetails(),
+        ),
+        Expanded(child: PgnBoardMoves()),
+        Expanded(child: SharePanel()),
       ]),
     );
   }

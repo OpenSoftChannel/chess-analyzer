@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../domain/Assets/styles.dart';
 
@@ -13,18 +14,19 @@ class ElevatedIconButton extends StatelessWidget {
 
   String label;
   IconData? icon;
+  FaIcon? faIcon;
 
-  ElevatedIconButton({
-    super.key,
-    this.callback,
-    this.btnBackground,
-    this.btnIconFontColor,
-    this.btnFontColor,
-    this.btnIconFontSize,
-    this.btnTextFontSize,
-    required this.icon,
-    required this.label,
-  });
+  ElevatedIconButton(
+      {super.key,
+      this.callback,
+      this.btnBackground,
+      this.btnIconFontColor,
+      this.btnFontColor,
+      this.btnIconFontSize,
+      this.btnTextFontSize,
+      this.icon,
+      required this.label,
+      this.faIcon});
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +45,10 @@ class ElevatedIconButton extends StatelessWidget {
             child: Icon(icon,
                 color: btnIconFontColor ?? ThemeColors.defaultBtnTextColor,
                 size: btnIconFontSize ?? GeneralTheme.btnIconSize),
+          ),
+          Visibility(
+            visible: faIcon != null,
+            child: faIcon ?? const Placeholder(),
           ),
           const SizedBox(
             width: 5,
