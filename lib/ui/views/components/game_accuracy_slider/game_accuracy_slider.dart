@@ -14,20 +14,21 @@ class GameAccuracySlider extends StatelessWidget {
   late Function? onBlackHoverExit;
   late Color? whiteColor;
   late Color? blackColor;
+  late double? width;
 
-  GameAccuracySlider({
-    super.key,
-    this.move = 0,
-    required this.white,
-    required this.black,
-    required this.rounding,
-    this.onWhiteHoverEnter,
-    this.onWhiteHoverExit,
-    this.onBlackHoverEnter,
-    this.onBlackHoverExit,
-    this.whiteColor,
-    this.blackColor,
-  });
+  GameAccuracySlider(
+      {super.key,
+      this.move = 0,
+      required this.white,
+      required this.black,
+      required this.rounding,
+      this.onWhiteHoverEnter,
+      this.onWhiteHoverExit,
+      this.onBlackHoverEnter,
+      this.onBlackHoverExit,
+      this.whiteColor,
+      this.blackColor,
+      this.width});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,7 @@ class GameAccuracySlider extends StatelessWidget {
             onEnter: (event) => onWhiteHoverEnter?.call(move, white) ?? {},
             onExit: (event) => onWhiteHoverExit?.call() ?? {},
             child: Container(
-              width: 10,
+              width: width,
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.transparent,
@@ -68,7 +69,7 @@ class GameAccuracySlider extends StatelessWidget {
                 {},
             onExit: (event) => onBlackHoverExit?.call() ?? {},
             child: Container(
-              width: 10,
+              width: width,
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.transparent,
