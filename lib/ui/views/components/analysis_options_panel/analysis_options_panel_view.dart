@@ -1,4 +1,5 @@
 import 'package:chess/domain/Assets/styles.dart';
+import 'package:chess/ui/views/components/export_panel/export_panel_view.dart';
 import 'package:chess/ui/views/components/line_chart/line_chart_view.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
@@ -66,7 +67,13 @@ class AnalysisOptionsPanel extends StatelessWidget {
                   ),
                 )
               else if (viewModel.isExportOpen)
-                Text("Export")
+                Expanded(
+                  flex: 10,
+                  child: Container(
+                    color: ThemeColors.cardBackground,
+                    child: const ExportPanel(),
+                  ),
+                )
               else if (viewModel.isTimeframeOpen)
                 Expanded(
                   flex: 10,
