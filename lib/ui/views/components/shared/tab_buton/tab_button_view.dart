@@ -10,22 +10,24 @@ class TabButton extends StatelessWidget {
   final int? badgeCount;
   final Function callback;
   late bool isActive;
+  final Color? color;
 
-  TabButton({
-    super.key,
-    required this.iconSize,
-    required this.callback,
-    required this.isActive,
-    this.badgeCount,
-    this.icon,
-    this.label,
-  });
+  TabButton(
+      {super.key,
+      required this.iconSize,
+      required this.callback,
+      required this.isActive,
+      this.badgeCount,
+      this.icon,
+      this.label,
+      this.color});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(10),
-      color: isActive ? ThemeColors.mainText : ThemeColors.cardBackground,
+      color:
+          isActive ? color ?? ThemeColors.mainText : ThemeColors.cardBackground,
       child: InkWell(
         onTap: () => callback.call(),
         child: Visibility(
@@ -38,7 +40,11 @@ class TabButton extends StatelessWidget {
                 child: GeneralTheme.tableHeaderIcon(
                   icon!,
                   iconSize ?? 0,
-                  isActive ? ThemeColors.cardBackground : ThemeColors.mainText,
+                  isActive
+                      ? color != null
+                          ? Colors.white
+                          : ThemeColors.cardBackground
+                      : ThemeColors.mainText,
                 ),
               ),
               Visibility(
@@ -47,7 +53,9 @@ class TabButton extends StatelessWidget {
                   label!,
                   style: TextStyle(
                     color: isActive
-                        ? ThemeColors.cardBackground
+                        ? color != null
+                            ? Colors.white
+                            : ThemeColors.cardBackground
                         : ThemeColors.mainText,
                     fontSize: (iconSize! - 1),
                   ),
