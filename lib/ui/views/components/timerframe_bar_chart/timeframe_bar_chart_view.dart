@@ -32,6 +32,7 @@ class TimeframeBarChart extends StatelessWidget {
                             black: e.blackTime,
                             white: e.whiteTime,
                             rounding: 12,
+                            width: 10,
                             onWhiteHoverEnter: viewModel.whiteBarHoverEnter,
                             onWhiteHoverExit: (() =>
                                 viewModel.whiteBarHoverExit(e)),
