@@ -12,6 +12,8 @@ class GameAccuracySlider extends StatelessWidget {
   late Function? onWhiteHoverExit;
   late Function? onBlackHoverEnter;
   late Function? onBlackHoverExit;
+  late Color? whiteColor;
+  late Color? blackColor;
 
   GameAccuracySlider({
     super.key,
@@ -23,6 +25,8 @@ class GameAccuracySlider extends StatelessWidget {
     this.onWhiteHoverExit,
     this.onBlackHoverEnter,
     this.onBlackHoverExit,
+    this.whiteColor,
+    this.blackColor,
   });
 
   @override
@@ -35,6 +39,7 @@ class GameAccuracySlider extends StatelessWidget {
             onEnter: (event) => onWhiteHoverEnter?.call(move, white) ?? {},
             onExit: (event) => onWhiteHoverExit?.call() ?? {},
             child: Container(
+              width: 10,
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.transparent,
@@ -43,7 +48,7 @@ class GameAccuracySlider extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(rounding),
                     topRight: Radius.circular(rounding)),
-                color: ThemeColors.mainText,
+                color: whiteColor ?? ThemeColors.mainText,
               ),
               child: const Opacity(
                 opacity: 0,
@@ -63,6 +68,7 @@ class GameAccuracySlider extends StatelessWidget {
                 {},
             onExit: (event) => onBlackHoverExit?.call() ?? {},
             child: Container(
+              width: 10,
               decoration: BoxDecoration(
                 border: Border.all(
                   color: Colors.transparent,
@@ -71,7 +77,7 @@ class GameAccuracySlider extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(rounding),
                     bottomRight: Radius.circular(rounding)),
-                color: ThemeColors.cardBackground,
+                color: blackColor ?? ThemeColors.cardBackground,
               ),
               child: const Opacity(
                 opacity: 0,
