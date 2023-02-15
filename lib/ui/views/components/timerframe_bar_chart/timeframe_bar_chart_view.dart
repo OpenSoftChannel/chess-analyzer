@@ -1,6 +1,5 @@
 import 'package:chess/ui/views/components/timerframe_bar_chart/timeframe_bar_chart_viewmodel.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:stacked/stacked.dart';
 
 import '../../../../domain/Assets/styles.dart';
@@ -20,35 +19,30 @@ class TimeframeBarChart extends StatelessWidget {
         onHover: (event) => viewModel.mousePositionChanged(event),
         child: Stack(
           children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Center(
-                  child: Divider(color: ThemeColors.mainText),
-                  heightFactor: 1,
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: viewModel.chartData
-                  .map((e) => Container(
-                        height: viewModel.getElementHeight(e),
-                        margin: EdgeInsets.fromLTRB(0, 30, 0, 30),
-                        child: GameAccuracySlider(
-                          move: e.move,
-                          black: e.blackTime,
-                          white: e.whiteTime,
-                          rounding: 12,
-                          onWhiteHoverEnter: viewModel.whiteBarHoverEnter,
-                          onWhiteHoverExit: (() =>
-                              viewModel.whiteBarHoverExit(e)),
-                          onBlackHoverEnter: viewModel.blackBarHoverEnter,
-                          onBlackHoverExit: (() =>
-                              viewModel.blackBarHoverExit(e)),
-                        ),
-                      ))
-                  .toList(),
+            Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: viewModel.chartData
+                    .map((e) => Container(
+                          height: viewModel.getElementHeight(e),
+                          margin: EdgeInsets.fromLTRB(0, 30, 0, 30),
+                          child: GameAccuracySlider(
+                            move: e.move,
+                            black: e.blackTime,
+                            white: e.whiteTime,
+                            rounding: 12,
+                            onWhiteHoverEnter: viewModel.whiteBarHoverEnter,
+                            onWhiteHoverExit: (() =>
+                                viewModel.whiteBarHoverExit(e)),
+                            onBlackHoverEnter: viewModel.blackBarHoverEnter,
+                            onBlackHoverExit: (() =>
+                                viewModel.blackBarHoverExit(e)),
+                            blackColor: ThemeColors.mainThemeBackground,
+                          ),
+                        ))
+                    .toList(),
+              ),
             ),
             PopupPanel(
               isVisible: viewModel.itemHovered,

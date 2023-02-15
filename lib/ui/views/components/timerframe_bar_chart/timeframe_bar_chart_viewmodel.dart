@@ -66,7 +66,7 @@ class TimeframeBarChartViewModel extends BaseViewModel {
 
     List<DummyBarData> barChartDummyData = [];
 
-    for (var i = 1; i < 12; i++) {
+    for (var i = 1; i < 80; i++) {
       var rng = Random();
       var maxVal = 20;
       var minVal = 3;
