@@ -8,7 +8,9 @@ import '../shared/popup_panel/popup_panel_view.dart';
 import 'line_chart_viewmodel.dart';
 
 class LineChart extends StatelessWidget {
-  const LineChart({super.key});
+  final Color color;
+
+  const LineChart({super.key, required this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -47,9 +49,10 @@ class LineChart extends StatelessWidget {
                       ),
                       backgroundDecorations: [
                         SparkLineDecoration(
+                          stretchLine: true,
                           smoothPoints: true,
                           fill: true,
-                          lineColor: ThemeColors.mainText,
+                          lineColor: color,
                         ),
                       ],
                     ),

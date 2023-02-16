@@ -1,26 +1,13 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:charts_painter/chart.dart';
 import 'package:flutter/gestures.dart';
 import 'package:stacked/stacked.dart';
 
 class LineChartViewModel extends BaseViewModel {
   final List<int> _chartTestData = [
-    9,
-    9,
-    9,
-    9,
-    9,
-    9,
-    9,
-    9,
-    9,
-    9,
-    9,
-    9,
-    9,
-    9,
-    9,
+    5,
     4,
-    2,
+    3,
     7,
     6,
     2,

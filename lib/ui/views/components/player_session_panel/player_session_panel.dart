@@ -6,6 +6,7 @@ import 'package:progresso/progresso.dart';
 import '../../../../domain/Assets/styles.dart';
 import '../shared/player_game_card/player_game_card_view.dart';
 
+//TODO Address the issue with this component, when changing resolution it causes the application to freeze because of draw overflow.
 class PlayerSessionPanel extends StatelessWidget {
   const PlayerSessionPanel({super.key});
 
