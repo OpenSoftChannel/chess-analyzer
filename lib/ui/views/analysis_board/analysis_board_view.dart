@@ -2,6 +2,7 @@ import 'package:chess/ui/views/analysis_board/analysis_board_viewmodel.dart';
 import 'package:chess/ui/views/components/analysis_options_panel/analysis_options_panel_view.dart';
 import 'package:chess/ui/views/components/engine_lines_panel/engine_lines_panel_view.dart';
 import 'package:chess/ui/views/components/game_accuracy_slider/game_accuracy_slider.dart';
+import 'package:chess/ui/views/components/game_notes/game_notes_view.dart';
 import 'package:chess/ui/views/components/player_session_panel/player_session_panel.dart';
 import 'package:chess/ui/views/game_board/game_board_view.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,35 @@ class AnalysisBoard extends StatelessWidget {
                     child: Row(
                       children: [
                         Expanded(
-                          flex: 9,
+                          flex: 4,
+                          child: Container(
+                            color: ThemeColors.cardBackground,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.stretch,
+                              children: [
+                                Container(
+                                  color: ThemeColors.cardBackground,
+                                  padding: EdgeInsets.all(10),
+                                  child: Text(
+                                    "Analysis notes",
+                                    style: TextStyle(
+                                      color: ThemeColors.mainText,
+                                      fontSize: 22,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                Divider(
+                                  height: 1,
+                                  color: ThemeColors.innerText,
+                                ),
+                                GameNotes(flex: 4),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Expanded(
+                          flex: 6,
                           child: Row(
                             children: [
                               Expanded(
@@ -44,35 +73,41 @@ class AnalysisBoard extends StatelessWidget {
                                   black: 4,
                                   white: 1,
                                   rounding: 0,
+                                  blackColor: ThemeColors.mainThemeBackground,
                                 ),
-                              ),
-                              const SizedBox(
-                                width: 20,
                               ),
                               Expanded(
                                 flex: 8,
-                                child: Column(
-                                  // ignore: prefer_const_literals_to_create_immutables
-                                  children: [
-                                    const SizedBox(
-                                      height: 20,
-                                    ),
-                                    const PlayerSessionPanel(),
-                                    const Expanded(
-                                      child: GameBoard(
-                                          aspectRationModifier: 0.485),
-                                    ),
-                                    const PlayerSessionPanel(),
-                                    const SizedBox(
-                                      height: 20,
-                                    )
-                                  ],
+                                child: Container(
+                                  color: ThemeColors.cardBackground,
+                                  padding: EdgeInsets.all(50),
+                                  child: Column(
+                                    // ignore: prefer_const_literals_to_create_immutables
+                                    children: [
+                                      const SizedBox(
+                                        height: 20,
+                                      ),
+                                      const PlayerSessionPanel(),
+                                      const Expanded(
+                                        child: GameBoard(
+                                            aspectRationModifier: 0.485),
+                                      ),
+                                      const PlayerSessionPanel(),
+                                      const SizedBox(
+                                        height: 20,
+                                      )
+                                    ],
+                                  ),
                                 ),
                               )
                             ],
                           ),
                         ),
-                        Expanded(flex: 8, child: EngineLinesPanel()),
+                        Expanded(
+                          flex:
+                              MediaQuery.of(context).size.width > 1920 ? 8 : 4,
+                          child: EngineLinesPanel(),
+                        ),
                       ],
                     ),
                   ),
