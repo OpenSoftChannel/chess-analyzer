@@ -2,8 +2,10 @@ import 'package:chess/domain/Assets/styles.dart';
 import 'package:chess/ui/views/components/export_panel/export_panel_view.dart';
 import 'package:chess/ui/views/components/line_chart/line_chart_view.dart';
 import 'package:chess/ui/views/components/shared/IconButton/elevated_icon_button.dart';
+import 'package:chess/ui/views/components/variations_panel/variations_panel_view.dart';
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
+import 'dart:math' as math;
 
 import '../shared/tab_buton/tab_button_view.dart';
 import '../timerframe_bar_chart/timeframe_bar_chart_view.dart';
@@ -75,7 +77,25 @@ class AnalysisOptionsPanel extends StatelessWidget {
                   flex: 10,
                   child: Container(
                     color: ThemeColors.cardBackground,
-                    child: const LineChart(),
+                    padding: EdgeInsets.fromLTRB(0, 30, 0, 30),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: LineChart(
+                            color: ThemeColors.mainText,
+                          ),
+                        ),
+                        Expanded(
+                          child: Transform(
+                            alignment: Alignment.center,
+                            transform: Matrix4.rotationX(math.pi),
+                            child: LineChart(
+                              color: ThemeColors.mainThemeBackground,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 )
               else if (viewModel.isExportOpen)
@@ -94,7 +114,11 @@ class AnalysisOptionsPanel extends StatelessWidget {
                       child: const TimeframeBarChart()),
                 )
               else if (viewModel.isVaritationsOpen)
-                Text("Variations")
+                Expanded(
+                    flex: 10,
+                    child: Container(
+                        color: ThemeColors.cardBackground,
+                        child: VariationsPanel()))
             ],
           )),
     );

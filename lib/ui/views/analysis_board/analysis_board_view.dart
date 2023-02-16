@@ -25,13 +25,13 @@ class AnalysisBoard extends StatelessWidget {
         child: Row(
           children: [
             Expanded(
-              flex: 10,
+              flex: MediaQuery.of(context).size.width > 1920 ? 10 : 14,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    flex: 5,
+                    flex: MediaQuery.of(context).size.width > 1920 ? 5 : 4,
                     child: Row(
                       children: [
                         Expanded(

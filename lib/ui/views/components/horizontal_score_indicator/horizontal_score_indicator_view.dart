@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 import '../../../../domain/Assets/styles.dart';
 
 class HorizontalScoreIndicator extends StatelessWidget {
-  const HorizontalScoreIndicator({super.key});
+  final Color? white;
+  final Color? black;
+  final double? size;
+
+  const HorizontalScoreIndicator(
+      {super.key, this.white, this.black, this.size});
 
   @override
   Widget build(BuildContext context) {
@@ -19,15 +24,15 @@ class HorizontalScoreIndicator extends StatelessWidget {
                   topLeft: Radius.circular(3),
                   bottomLeft: Radius.circular(3),
                 ),
-                color: ThemeColors.mainText,
+                color: white ?? ThemeColors.mainText,
               ),
               child: Container(
                 margin: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                 child: Text(
                   "1",
                   style: TextStyle(
-                    color: ThemeColors.cardBackground,
-                  ),
+                      color: ThemeColors.cardBackground,
+                      fontSize: size ?? GeneralTheme.btnTextSize),
                 ),
               ),
             ),
@@ -40,15 +45,15 @@ class HorizontalScoreIndicator extends StatelessWidget {
                   topRight: Radius.circular(3),
                   bottomRight: Radius.circular(3),
                 ),
-                color: ThemeColors.mainThemeBackground,
+                color: black ?? ThemeColors.mainThemeBackground,
               ),
               child: Container(
                 margin: const EdgeInsets.fromLTRB(0, 0, 5, 0),
                 child: Text(
                   "1",
                   style: TextStyle(
-                    color: ThemeColors.mainText,
-                  ),
+                      color: ThemeColors.mainText,
+                      fontSize: size ?? GeneralTheme.btnTextSize),
                   textAlign: TextAlign.right,
                 ),
               ),

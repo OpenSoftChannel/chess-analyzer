@@ -11,7 +11,7 @@ class ElevatedIconButton extends StatelessWidget {
   Color? btnFontColor;
   double? btnIconFontSize;
   double? btnTextFontSize;
-
+  CrossAxisAlignment? btnAlignment;
   String label;
   IconData? icon;
   FaIcon? faIcon;
@@ -25,6 +25,7 @@ class ElevatedIconButton extends StatelessWidget {
       this.btnIconFontSize,
       this.btnTextFontSize,
       this.icon,
+      this.btnAlignment,
       required this.label,
       this.faIcon});
 
@@ -39,6 +40,7 @@ class ElevatedIconButton extends StatelessWidget {
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: btnAlignment ?? CrossAxisAlignment.center,
         children: [
           Visibility(
             visible: icon != null,
