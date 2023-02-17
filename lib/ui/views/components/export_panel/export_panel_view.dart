@@ -12,14 +12,16 @@ class ExportPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder.reactive(
       viewModelBuilder: (() => ExportPanelViewModel()),
-      builder: (context, viewModel, child) =>
-          Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-        Expanded(
-          child: ExportPanelGameDetails(),
-        ),
-        Expanded(child: PgnBoardMoves()),
-        Expanded(child: SharePanel()),
-      ]),
+      builder: (context, viewModel, child) => Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: const [
+          Expanded(
+            child: ExportPanelGameDetails(),
+          ),
+          Expanded(child: PgnBoardMoves()),
+          Expanded(child: SharePanel()),
+        ],
+      ),
     );
   }
 }
