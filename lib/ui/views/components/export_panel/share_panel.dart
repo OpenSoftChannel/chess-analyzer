@@ -19,13 +19,9 @@ class SharePanel extends StatelessWidget {
           "Share your game",
           style: TextStyle(color: ThemeColors.mainText),
         ),
-        FittedBox(
-          fit: BoxFit.scaleDown,
-          child: Image.network(
-            "https://camo.githubusercontent.com/ce63c19d41524780a8554ab2451fb512656acf56356868e5a62fc13ef6e11d14/68747470733a2f2f692e696d6775722e636f6d2f645871724949592e676966",
-            height: 180,
-          ),
-        ),
+        //TODO This will be replaced with a GIF generatted internally from the GameBoard component
+        //Replacing with a Placeholder because it causes loading issues at initialization.
+        Container(width: 100, height: 100, child: Placeholder()),
 
         const SizedBox(
           height: 20,
