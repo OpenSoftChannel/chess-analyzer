@@ -83,6 +83,9 @@ class AnalysisOptionsPanel extends StatelessWidget {
                         Expanded(
                           child: LineChart(
                             color: ThemeColors.mainText,
+                            popUpDirection: 0,
+                            popUpBoxColor: ThemeColors.mainText,
+                            popUpFontColor: ThemeColors.cardBackground,
                           ),
                         ),
                         Expanded(
@@ -91,6 +94,9 @@ class AnalysisOptionsPanel extends StatelessWidget {
                             transform: Matrix4.rotationX(math.pi),
                             child: LineChart(
                               color: ThemeColors.mainThemeBackground,
+                              popUpDirection: math.pi,
+                              popUpBoxColor: ThemeColors.mainText,
+                              popUpFontColor: ThemeColors.cardBackground,
                             ),
                           ),
                         ),

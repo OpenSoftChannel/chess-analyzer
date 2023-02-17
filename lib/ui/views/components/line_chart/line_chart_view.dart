@@ -9,8 +9,17 @@ import 'line_chart_viewmodel.dart';
 
 class LineChart extends StatelessWidget {
   final Color color;
+  final Color popUpBoxColor;
+  final Color popUpFontColor;
+  final double popUpDirection;
 
-  const LineChart({super.key, required this.color});
+  const LineChart({
+    super.key,
+    required this.color,
+    required this.popUpBoxColor,
+    required this.popUpFontColor,
+    required this.popUpDirection,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +74,8 @@ class LineChart extends StatelessWidget {
                       line: "1",
                       move: "qc4..kef5",
                       advantage: "22",
+                      color: popUpBoxColor,
+                      transform: popUpDirection,
                     ),
                   )
                 ],
